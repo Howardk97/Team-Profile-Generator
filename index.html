@@ -1,66 +1,4 @@
-// Import downloaded packages
-const inquirer = require('inquirer');
-
-const fs = require('fs');
-
-// Define a method named promptUser
-const promptUser = () => {
-    console.log(fs.existsSync(  ));
-
-    return inquirer.prompt([
-        // Ask for name, employee ID, email, and office number of manager
-        {
-            type: 'input',
-            name: 'manager_name',
-            message: "Enter the manager's name."
-        },
-
-        {
-            type: 'input',
-            name: 'manager_employee_ID',
-            message: "Enter the manager's employee ID."
-        },
-
-        {
-            type: 'input',
-            name: 'manager_email',
-            message: "Enter the manager's email."
-        },
-
-        {
-            type: 'input',
-            name: 'manager_office_num',
-            message: "Enter the manager's office number."
-        },
-
-        // Ask user if they would like to add an engineer, intern, or finish adding
-        {
-            type: 'checkbox',
-            name: 'eng_int_finish',
-            message: 'Would you like to add an engineer or intern next? Select finish to skip this step and generate webpage.',
-            choices: ['Add Engineer', 'Add Intern', 'Finish'],
-        },
-
-        // Give option to exit and generate webpage
-        {
-            type: 'checkbox',
-            name: 'finish',
-            message: 'Would you like to add an engineer or intern next? Select finish to skip this step and generate webpage.',
-            choices: ['Exit'],
-        },
-    ]);
-    }
-
-    // const engineer = `${}`
-    // If engineer is chosen
-    // if() {}
-            // Ask for name, ID, email, and GitHub username 
-
-    // If intern is chosen
-            // Ask for name, ID, email, and school
-
-    const generateHTML = ({}) =>
-  `<!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
     <head>
     <meta charset="UTF-8">
@@ -143,27 +81,4 @@ const promptUser = () => {
         </section>
         <script src="./index.js"></script>
     </body>
-    </html>`;
-
-    // Use fs to prompt user when application runs
-    const init = () => {
-        promptUser()
-        .then((answers) => fs.writeFileSync('index.html', generateHTML(answers)))
-        .then((err) => console.error(err));
-    };
-
-    init()
-
-    console.log(`${finish}`);
-
-    // console.log(`${eng_int_finish}`);
-
-    // Attach each input username to each github link
-
-    // Attach link to page
-
-    // Display content on html when user is ready to generate webpage
-
-
-
-
+    </html>
