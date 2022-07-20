@@ -161,16 +161,7 @@ const promptUser = () => {
     ]);
     }
 
-    // const engineer = `${eng_int_finish}`
-    // If engineer is chosen
-    // if(typeof `${eng_int_finish}` === 'string') {
-    //     console.log('user input defined!');
-    // }
-            //Ask for name, ID, email, and GitHub username 
-
-   // If intern is chosen
-         //   Ask for name, ID, email, and school
-
+    // Function that holds contents for html file
     const generateHTML = ({manager_name, manager_email, manager_ID, manager_office_num, eng_name_1, eng_ID_1, eng_email_1, eng_github_1, eng_name_2, eng_ID_2, eng_email_2, eng_github_2, int_name_1, int_name_2, int_ID_1, int_ID_2, int_email_1, int_email_2, int_school_1, int_school_2 }) => {
     return `<!DOCTYPE html>
     <html lang="en">
