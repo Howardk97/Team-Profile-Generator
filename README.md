@@ -15,6 +15,8 @@ Enter in "npm i" in the terminal.
 ## Usage
 Enter "node index.js" in terminal.
 
+[![Watch the video]](https://drive.google.com/file/d/15cnfljjtlmfLrxVuawoLPXs4OFKOCq9o/view)
+
 ## Credits
 *GitHub:  https://github.com/Howardk97/Team Profile Generator
 
