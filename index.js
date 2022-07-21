@@ -7,162 +7,162 @@ const Employee = require('Employee');
 const fs = require('fs');
 
 // Define a method named promptUser
-// const promptUser = () => {
-//     return inquirer.prompt([
-//         // Ask for name, employee ID, email, and office number of manager
-//         {
-//             type: 'input',
-//             name: 'manager_name',
-//             message: "Enter the manager's name."
-//         },
+const promptUser = () => {
+    return inquirer.prompt([
+        // Ask for name, employee ID, email, and office number of manager
+        {
+            type: 'input',
+            name: 'manager_name',
+            message: "Enter the manager's name."
+        },
 
-//         {
-//             type: 'input',
-//             name: 'manager_ID',
-//             message: "Enter the manager's employee ID."
-//         },
+        {
+            type: 'input',
+            name: 'manager_ID',
+            message: "Enter the manager's employee ID."
+        },
 
-//         {
-//             type: 'input',
-//             name: 'manager_email',
-//             message: "Enter the manager's email."
-//         },
+        {
+            type: 'input',
+            name: 'manager_email',
+            message: "Enter the manager's email."
+        },
 
-//         {
-//             type: 'input',
-//             name: 'manager_office_num',
-//             message: "Enter the manager's office number."
-//         },
+        {
+            type: 'input',
+            name: 'manager_office_num',
+            message: "Enter the manager's office number."
+        },
 
-//         // Ask user if they would like to add an engineer, intern, or finish adding
-//         {
-//             type: 'checkbox',
-//             name: 'eng_int_finish_1',
-//             message: 'Would you like to add an engineer or intern next? Select finish to skip this step and generate webpage.',
-//             choices: ['Add Engineer', 'Add Intern', 'Finish'],
-//         },
+        // Ask user if they would like to add an engineer, intern, or finish adding
+        {
+            type: 'checkbox',
+            name: 'eng_int_finish_1',
+            message: 'Would you like to add an engineer or intern next? Select finish to skip this step and generate webpage.',
+            choices: ['Add Engineer', 'Add Intern', 'Finish'],
+        },
 
-//         // If engineer selected
-//         {
-//             type: 'input',
-//             name: 'eng_name_1',
-//             message: "Enter the engineer's name."
-//         },
+        // If engineer selected
+        {
+            type: 'input',
+            name: 'eng_name_1',
+            message: "Enter the engineer's name."
+        },
 
-//         {
-//             type: 'input',
-//             name: 'eng_ID_1',
-//             message: "Enter the engineer's ID",
-//         },
+        {
+            type: 'input',
+            name: 'eng_ID_1',
+            message: "Enter the engineer's ID",
+        },
 
-//         {
-//             type: 'input',
-//             name: 'eng_email_1',
-//             message: "Enter the engineer's email."
-//         },
+        {
+            type: 'input',
+            name: 'eng_email_1',
+            message: "Enter the engineer's email."
+        },
 
-//         {
-//             type: 'input',
-//             name: 'eng_github_1',
-//             message: "Enter the engineer's GitHub user name.",
-//         },
+        {
+            type: 'input',
+            name: 'eng_github_1',
+            message: "Enter the engineer's GitHub user name.",
+        },
 
-//         {
-//             type:"checkbox",
-//             name:"eng_int_finish_2",
-//             message:"Would you like to add another engineer, add an intern, or finish adding team memebers?",
-//             choices: ["Add Engineer", "Add Intern", "Finish"]
-//         },
+        {
+            type:"checkbox",
+            name:"eng_int_finish_2",
+            message:"Would you like to add another engineer, add an intern, or finish adding team memebers?",
+            choices: ["Add Engineer", "Add Intern", "Finish"]
+        },
 
-//         {
-//             type: 'input',
-//             name: 'eng_name_2',
-//             message: "Enter the engineer's name."
-//         },
+        {
+            type: 'input',
+            name: 'eng_name_2',
+            message: "Enter the engineer's name."
+        },
 
-//         {
-//             type: 'input',
-//             name: 'eng_ID_2',
-//             message: "Enter the engineer's ID",
-//         },
+        {
+            type: 'input',
+            name: 'eng_ID_2',
+            message: "Enter the engineer's ID",
+        },
 
-//         {
-//             type: 'input',
-//             name: 'eng_email_2',
-//             message: "Enter the engineer's email."
-//         },
+        {
+            type: 'input',
+            name: 'eng_email_2',
+            message: "Enter the engineer's email."
+        },
 
-//         {
-//             type: 'input',
-//             name: 'eng_github_2',
-//             message: "Enter the engineer's GitHub user name",
-//         },
+        {
+            type: 'input',
+            name: 'eng_github_2',
+            message: "Enter the engineer's GitHub user name",
+        },
 
-//         // If intern selected
-//         {
-//             type: 'input',
-//             name: 'int_name_1',
-//             message: "Enter the intern's name."
-//         },
+        // If intern selected
+        {
+            type: 'input',
+            name: 'int_name_1',
+            message: "Enter the intern's name."
+        },
 
-//         {
-//             type: 'input',
-//             name: 'int_ID_1',
-//             message: "Enter the intern's ID",
-//         },
+        {
+            type: 'input',
+            name: 'int_ID_1',
+            message: "Enter the intern's ID",
+        },
 
-//         {
-//             type: 'input',
-//             name: 'int_email_1',
-//             message: "Enter the intern's email."
-//         },
+        {
+            type: 'input',
+            name: 'int_email_1',
+            message: "Enter the intern's email."
+        },
 
-//         {
-//             type: 'input',
-//             name: 'int_school_1',
-//             message: "Enter the intern's school",
-//         },
+        {
+            type: 'input',
+            name: 'int_school_1',
+            message: "Enter the intern's school",
+        },
 
-//         {
-//             type:"checkbox",
-//             name:"eng_int_finish_3",
-//             message:"Would you like to add another engineer, add an intern, or finish adding team memebers?",
-//             choices: ["Add Engineer", "Add Intern", "Finish"]
-//         },
+        {
+            type:"checkbox",
+            name:"eng_int_finish_3",
+            message:"Would you like to add another engineer, add an intern, or finish adding team memebers?",
+            choices: ["Add Engineer", "Add Intern", "Finish"]
+        },
 
-//         {
-//             type: 'input',
-//             name: 'int_name_2',
-//             message: "Enter the intern's name."
-//         },
+        {
+            type: 'input',
+            name: 'int_name_2',
+            message: "Enter the intern's name."
+        },
 
-//         {
-//             type: 'input',
-//             name: 'int_ID_2',
-//             message: "Enter the intern's ID",
-//         },
+        {
+            type: 'input',
+            name: 'int_ID_2',
+            message: "Enter the intern's ID",
+        },
 
-//         {
-//             type: 'input',
-//             name: 'int_email_2',
-//             message: "Enter the intern's email."
-//         },
+        {
+            type: 'input',
+            name: 'int_email_2',
+            message: "Enter the intern's email."
+        },
 
-//         {
-//             type: 'input',
-//             name: 'int_school_2',
-//             message: "Enter the intern's school",
-//         },
+        {
+            type: 'input',
+            name: 'int_school_2',
+            message: "Enter the intern's school",
+        },
 
-//         // Give option to exit and generate webpage
-//         {
-//             type: 'checkbox',
-//             name: 'finish',
-//             message: 'Would you like to add an engineer or intern next? Select finish to skip this step and generate webpage.',
-//             choices: ['Exit'],
-//         },
-//     ]);
-//     }
+        // Give option to exit and generate webpage
+        {
+            type: 'checkbox',
+            name: 'finish',
+            message: 'Would you like to add an engineer or intern next? Select finish to skip this step and generate webpage.',
+            choices: ['Exit'],
+        },
+    ]);
+    }
 
     // Function that holds contents for html file
     const generateHTML = ({manager_name, manager_email, manager_ID, manager_office_num, eng_name_1, eng_ID_1, eng_email_1, eng_github_1, eng_name_2, eng_ID_2, eng_email_2, eng_github_2, int_name_1, int_name_2, int_ID_1, int_ID_2, int_email_1, int_email_2, int_school_1, int_school_2 }) => {
