@@ -3,11 +3,29 @@ const Employee = require('../lib/Employee');
 describe("Employee", () => {
     describe("getName", () => {
         it("should prompt user to enter employee's name", () => {
-            const namePrompt = "What is the employee's name?";
+            const Kim = new Employee('Kimberly', '1', 'kimberlyhoward529@gmail.com')
 
-            const result = new Employee().getName(this.message);
+            expect(Kim.name).toEqual('Kimberly');
+        });
+    });
+});
 
-            expect(result).toEqual(namePrompt);
+describe("Employee", () => {
+    describe("getId", () => {
+        it("should prompt user to enter employee's ID number", () => {
+            const Kim = new Employee('Kimberly', '1', 'kimberlyhoward529@gmail.com');
+
+            expect(Kim.id).toEqual('1');
+        });
+    });
+});
+
+describe("Employee", () => {
+    describe("getEmail", () => {
+        it("should prompt user to enter employee's email.", () => {
+            const Kim = new Employee('Kimberly', '1', 'kimberlyhoward529@gmail.com');
+
+            expect(Kim.email).toEqual('kimberlyhoward529@gmail.com');
         });
     });
 });
